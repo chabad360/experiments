@@ -5,23 +5,35 @@ import (
 )
 
 func BenchmarkFib10(b *testing.B) {
-    for i := 0; i < b.N; i++ {
-        fib(10)
-    }
+	for i := 0; i < b.N; i++ {
+		fib1(10)
+	}
 }
 func BenchmarkFib210(b *testing.B) {
-    for i := 0; i < b.N; i++ {
-        fib2(10)
-    }
+	for i := 0; i < b.N; i++ {
+		fib2(10)
+	}
 }
 
-func BenchmarkFib20(b *testing.B) {
-    for i := 0; i < b.N; i++ {
-        fib(20)
-    }
+func BenchmarkFib310(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		fib3(10)
+	}
+}
+
+func BenchmarkFib120(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		fib1(20)
+	}
 }
 func BenchmarkFib220(b *testing.B) {
-    for i := 0; i < b.N; i++ {
-        fib2(20)
-    }
+	for i := 0; i < b.N; i++ {
+		fib2(20)
+	}
+}
+
+func BenchmarkFib320(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		fib3(20)
+	}
 }
