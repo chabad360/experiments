@@ -63,8 +63,22 @@ func fib3(n uint) uint {
 	return final
 }
 
+func fib4(n uint) uint {
+	n = n - 2
+	
+	var n1 uint = 0
+	var n2 uint = 1
+
+
+	for n >= 0 {
+		n1, n2, n = n1 + n2, n1, n - 1 
+	}
+
+	return n1
+}
+
 func main() {
 	fmt.Println("start")
-	n := uint(10)
-	fmt.Println(fib3(n))
+	n := uint(2)
+	fmt.Println(fib4(n))
 }

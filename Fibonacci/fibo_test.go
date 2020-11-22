@@ -21,6 +21,12 @@ func BenchmarkFib310(b *testing.B) {
 	}
 }
 
+func BenchmarkFib410(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		fib4(10)
+	}
+}
+
 func BenchmarkFib120(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		fib1(20)
@@ -35,5 +41,11 @@ func BenchmarkFib220(b *testing.B) {
 func BenchmarkFib320(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		fib3(20)
+	}
+}
+
+func BenchmarkFib420(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		fib4(20)
 	}
 }
